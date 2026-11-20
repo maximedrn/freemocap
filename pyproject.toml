@@ -52,8 +52,9 @@ skellypings = { git = "https://github.com/freemocap/skellypings" }
 
 [project.scripts]
 freemocap = "freemocap.__main__:run_main"
-[tool.setuptools]
-packages = ["freemocap"]
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["freemocap*"]
 
   [tool.uv]
   package = true
